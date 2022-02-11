@@ -2,17 +2,23 @@
   "name": "next-zod",
   "private": true,
   "scripts": {
+    "mock": "json-server -w db.json -p 4200 -d 150",
+    "serve": "concurrently \"npm run dev\" \"npm run mock\"",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "babel-preset-next": "^1.4.0",
     "next": "12.0.10",
+    "nextjs-progressbar": "^0.0.13",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "eslint": "8.8.0",
     "eslint-config-next": "12.0.10"
   }

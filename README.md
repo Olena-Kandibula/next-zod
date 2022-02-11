@@ -31,4 +31,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+1. Создать репозитрий с .gitignore
+   - клонировать
+2. Через терминал, в директории куда склонирован репозиторий устанавливаем next.js
+
+- npx create-next-app имя репозитория
+- npm run dev
+
+3. В папке pages
+
+- index.js - разметка
+
+4.  npm i nextjs-progressbar //add packet//это индикатор загрузки
+<!-- <NextNprogress// add in _app.js
+  color="#29D"
+  startPosition={0.3}
+  stopDelayMs={200}
+  height={3}
+  showOnShallow={true}
+/> -->
+
+5.  npm install sass
+
+6.  npm i -g json-server //fake server
+
+    - creat file db.json
+    - add script in package.json
+      "mock": "json-server -w db.json -p 4200 -d 1350",
+      <!-- "serve": "concurrently \"npm run dev\" \"npm run mock\"", -->
+
+7.  npm i -D concurrently//что бы запустить два скрипта на двух хостах
+    - add script in package.json
+      "serve": "concurrrently \"npm run dev\" \"npm run mock\"",

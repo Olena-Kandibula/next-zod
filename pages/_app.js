@@ -1,7 +1,20 @@
-import '../styles/globals.css'
+import NextNprogress from 'nextjs-progressbar';
+import '../styles/main.scss'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }) {
+    // console.log('Component',Component)
+    return (
+        <>
+        <NextNprogress          
+          color="orange"          
+          startPosition={0.3}          
+          stopDelayMs={200}          
+          height={3}          
+          showOnShallow={true}          
+        />
+        
+        <Component  {...pageProps} />        
+      </>
+      
+    )
 }
-
-export default MyApp
